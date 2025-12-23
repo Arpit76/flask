@@ -17,8 +17,8 @@ class Note(db.Model):
     title=  db.Column  (db.String,unique=True,nullable=False) 
     description= db.Column  (db.String)
 
-with app.app_context():
-    db.create_all()
+#with app.app_context():
+#    db.create_all()
 
 @app.route("/")
 def hello_world():
@@ -42,7 +42,7 @@ def note_create():
         )
         db.session.add(note)
         db.session.commit()
-        return jsonify({"success1": True})
+        return jsonify({"success": True})
         
 
     #return render_template("user/create.html")
