@@ -48,4 +48,5 @@ def note_create():
     #return render_template("user/create.html")
 
 #app.run(debug=True)
-app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
