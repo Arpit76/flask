@@ -18,8 +18,8 @@ class Note(db.Model):
     title=  db.Column  (db.String,unique=True,nullable=False) 
     description= db.Column  (db.String)
 
-#with app.app_context():
-#    db.create_all()
+with app.app_context():
+    db.create_all()
 
 @app.route("/")
 def hello_world():
@@ -52,4 +52,5 @@ def note_create():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+    #app.run(debug=True)
 
