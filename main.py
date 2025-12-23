@@ -17,8 +17,8 @@ class Note(db.Model):
     title=  db.Column  (db.String,unique=True,nullable=False) 
     description= db.Column  (db.String)
 
-#with app.app_context():
-#    db.create_all()
+with app.app_context():
+    db.create_all()
 
 @app.route("/")
 def hello_world():
